@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0798AC0A2F3D164900BEFE23 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0798AC092F3D164900BEFE23 /* tessdata */; };
+		0798AC482F3D2EBA00BEFE23 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0798AC472F3D2EBA00BEFE23 /* tessdata */; };
 		2D771E4F49F0405ED39E6802 /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 05A99CDC2F636CF64E69A219 /* SwiftyTesseract */; };
 		49C32DD1A6DF7E4401353253 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876B5C7831C25A97C61F970 /* TextRecognizer.swift */; };
 		5F74F238ED30712A58C953EB /* ResultWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5119FCF2D720A507E03656 /* ResultWindowController.swift */; };
+		682782DADF416673C45D012C /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5942D890BDA00298B305E /* HotkeyManager.swift */; };
 		6E106D91CC8D16BE2DEB07EE /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */; };
 		822863D93E29783AAF81817F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854C1562E1F20D9DA62EB99 /* main.swift */; };
 		A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119377B5104FC5C498AF8E5F /* ScreenSelector.swift */; };
@@ -20,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0798AC092F3D164900BEFE23 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = JPNReader/tessdata; sourceTree = "<group>"; };
+		0798AC472F3D2EBA00BEFE23 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = JPNReader/tessdata; sourceTree = "<group>"; };
 		0A90880183929ED75F929422 /* JPNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
 		119377B5104FC5C498AF8E5F /* ScreenSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelector.swift; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		2876B5C7831C25A97C61F970 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		2FAFD07B7751D7D4F1BFB926 /* jpn_vert.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = jpn_vert.traineddata; sourceTree = "<group>"; };
 		4A5119FCF2D720A507E03656 /* ResultWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWindowController.swift; sourceTree = "<group>"; };
+		8CB5942D890BDA00298B305E /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
 		A0C6A46313699A053A537127 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		B854C1562E1F20D9DA62EB99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D0920A0AFE86FDC31AEB9B89 /* JPNReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JPNReader.entitlements; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0AD542EA1F109E7C4021A711 /* Resources */,
 				BC5E193058783976A4A8C51E /* tessdata */,
 				BC90063F2EDB963EAB29AF72 /* UI */,
+				632E02B50DDA58E2E10B1330 /* Utilities */,
 			);
 			path = JPNReader;
 			sourceTree = "<group>";
@@ -85,10 +88,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		632E02B50DDA58E2E10B1330 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5942D890BDA00298B305E /* HotkeyManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		8058780B6FAC28CD1315EF43 = {
 			isa = PBXGroup;
 			children = (
-				0798AC092F3D164900BEFE23 /* tessdata */,
+				0798AC472F3D2EBA00BEFE23 /* tessdata */,
 				321BB07A25314157B8B5776C /* JPNReader */,
 				55EDCBCB7F57CD3BF9167AA1 /* Products */,
 			);
@@ -186,7 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0798AC0A2F3D164900BEFE23 /* tessdata in Resources */,
+				0798AC482F3D2EBA00BEFE23 /* tessdata in Resources */,
 				E64E47E26269BDF98B85E98F /* jpn_vert.traineddata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B665904D60CBED93221B63B3 /* AppDelegate.swift in Sources */,
+				682782DADF416673C45D012C /* HotkeyManager.swift in Sources */,
 				5F74F238ED30712A58C953EB /* ResultWindowController.swift in Sources */,
 				6E106D91CC8D16BE2DEB07EE /* ScreenCapturer.swift in Sources */,
 				A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */,

@@ -3,6 +3,7 @@ import Cocoa
 class StatusBarController {
     private var statusItem: NSStatusItem
     private var screenSelector: ScreenSelector?
+    private let hotkeyManager = HotkeyManager()
 
     init() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -13,18 +14,17 @@ class StatusBarController {
         }
 
         setupMenu()
+        setupGlobalHotkeys()
     }
 
     private func setupMenu() {
         let menu = NSMenu()
 
-        let verticalItem = NSMenuItem(title: "Vertical Capture Region", action: #selector(captureVertical), keyEquivalent: "j")
-        verticalItem.keyEquivalentModifierMask = [.command, .shift]
+        let verticalItem = NSMenuItem(title: "Vertical Capture Region (⌘⇧J)", action: #selector(captureVertical), keyEquivalent: "")
         verticalItem.target = self
         menu.addItem(verticalItem)
 
-        let horizontalItem = NSMenuItem(title: "Horizontal Capture Region", action: #selector(captureHorizontal), keyEquivalent: "k")
-        horizontalItem.keyEquivalentModifierMask = [.command, .shift]
+        let horizontalItem = NSMenuItem(title: "Horizontal Capture Region (⌘⇧K)", action: #selector(captureHorizontal), keyEquivalent: "")
         horizontalItem.target = self
         menu.addItem(horizontalItem)
 
@@ -35,6 +35,26 @@ class StatusBarController {
         menu.addItem(quitItem)
 
         statusItem.menu = menu
+    }
+
+    private func setupGlobalHotkeys() {
+        // Cmd+Shift+J → Vertical capture
+        // J = keyCode 38
+        hotkeyManager.register(
+            keyCode: 38,
+            modifiers: CGEventFlags([.maskCommand, .maskShift]),
+            action: { [weak self] in self?.captureRegion(orientation: .vertical) }
+        )
+
+        // Cmd+Shift+K → Horizontal capture
+        // K = keyCode 40
+        hotkeyManager.register(
+            keyCode: 40,
+            modifiers: CGEventFlags([.maskCommand, .maskShift]),
+            action: { [weak self] in self?.captureRegion(orientation: .horizontal) }
+        )
+
+        hotkeyManager.start()
     }
 
     @objc private func captureVertical() {
