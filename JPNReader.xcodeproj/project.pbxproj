@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49C32DD1A6DF7E4401353253 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876B5C7831C25A97C61F970 /* TextRecognizer.swift */; };
+		5F74F238ED30712A58C953EB /* ResultWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5119FCF2D720A507E03656 /* ResultWindowController.swift */; };
+		6E106D91CC8D16BE2DEB07EE /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */; };
+		822863D93E29783AAF81817F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854C1562E1F20D9DA62EB99 /* main.swift */; };
+		A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119377B5104FC5C498AF8E5F /* ScreenSelector.swift */; };
+		B665904D60CBED93221B63B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EBF830DCA040051A41AA6 /* AppDelegate.swift */; };
+		CCE1824656CEEDA722E05E6C /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C6A46313699A053A537127 /* StatusBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A90880183929ED75F929422 /* JPNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
+		119377B5104FC5C498AF8E5F /* ScreenSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelector.swift; sourceTree = "<group>"; };
+		235EBF830DCA040051A41AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2876B5C7831C25A97C61F970 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		4A5119FCF2D720A507E03656 /* ResultWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWindowController.swift; sourceTree = "<group>"; };
+		A0C6A46313699A053A537127 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		B854C1562E1F20D9DA62EB99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D0920A0AFE86FDC31AEB9B89 /* JPNReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JPNReader.entitlements; sourceTree = "<group>"; };
+		F8ECFADCBDFD1CDBFC8163EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0AB8C1F258507CDDB28FE1E6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				235EBF830DCA040051A41AA6 /* AppDelegate.swift */,
+				B854C1562E1F20D9DA62EB99 /* main.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0AD542EA1F109E7C4021A711 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8ECFADCBDFD1CDBFC8163EF /* Info.plist */,
+				D0920A0AFE86FDC31AEB9B89 /* JPNReader.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		321BB07A25314157B8B5776C /* JPNReader */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8C1F258507CDDB28FE1E6 /* App */,
+				D1E534658790EBA9B556492E /* Capture */,
+				E2D7C073ED767EA442422EF3 /* OCR */,
+				0AD542EA1F109E7C4021A711 /* Resources */,
+				BC90063F2EDB963EAB29AF72 /* UI */,
+			);
+			path = JPNReader;
+			sourceTree = "<group>";
+		};
+		55EDCBCB7F57CD3BF9167AA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A90880183929ED75F929422 /* JPNReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8058780B6FAC28CD1315EF43 = {
+			isa = PBXGroup;
+			children = (
+				321BB07A25314157B8B5776C /* JPNReader */,
+				55EDCBCB7F57CD3BF9167AA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC90063F2EDB963EAB29AF72 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4A5119FCF2D720A507E03656 /* ResultWindowController.swift */,
+				A0C6A46313699A053A537127 /* StatusBarController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D1E534658790EBA9B556492E /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */,
+				119377B5104FC5C498AF8E5F /* ScreenSelector.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		E2D7C073ED767EA442422EF3 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				2876B5C7831C25A97C61F970 /* TextRecognizer.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79833ECA05111EE8E461E5EB /* JPNReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E37844DA5C9835EB9B9DFC6 /* Build configuration list for PBXNativeTarget "JPNReader" */;
+			buildPhases = (
+				808F550E8D0139C7B3F4A791 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPNReader;
+			packageProductDependencies = (
+			);
+			productName = JPNReader;
+			productReference = 0A90880183929ED75F929422 /* JPNReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A58003C07A300146C143DABF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = D32BFF104DD6FADD665B89E6 /* Build configuration list for PBXProject "JPNReader" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8058780B6FAC28CD1315EF43;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79833ECA05111EE8E461E5EB /* JPNReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		808F550E8D0139C7B3F4A791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B665904D60CBED93221B63B3 /* AppDelegate.swift in Sources */,
+				5F74F238ED30712A58C953EB /* ResultWindowController.swift in Sources */,
+				6E106D91CC8D16BE2DEB07EE /* ScreenCapturer.swift in Sources */,
+				A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */,
+				CCE1824656CEEDA722E05E6C /* StatusBarController.swift in Sources */,
+				49C32DD1A6DF7E4401353253 /* TextRecognizer.swift in Sources */,
+				822863D93E29783AAF81817F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		10993849732A3943735A6C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JPNReader/Resources/JPNReader.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JPNReader/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joegraham.JPNReader;
+				PRODUCT_NAME = JPNReader;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		440C46185D3B5B23B2DA593F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		61B4D225F9CCC6385B412458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		E87B15CB4EA579C2D1A2B907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JPNReader/Resources/JPNReader.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JPNReader/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joegraham.JPNReader;
+				PRODUCT_NAME = JPNReader;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E37844DA5C9835EB9B9DFC6 /* Build configuration list for PBXNativeTarget "JPNReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10993849732A3943735A6C73 /* Debug */,
+				E87B15CB4EA579C2D1A2B907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D32BFF104DD6FADD665B89E6 /* Build configuration list for PBXProject "JPNReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61B4D225F9CCC6385B412458 /* Debug */,
+				440C46185D3B5B23B2DA593F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A58003C07A300146C143DABF /* Project object */;
+}
