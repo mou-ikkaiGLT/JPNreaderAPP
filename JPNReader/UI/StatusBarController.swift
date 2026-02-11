@@ -18,10 +18,15 @@ class StatusBarController {
     private func setupMenu() {
         let menu = NSMenu()
 
-        let captureItem = NSMenuItem(title: "Capture Region", action: #selector(captureRegion), keyEquivalent: "j")
-        captureItem.keyEquivalentModifierMask = [.command, .shift]
-        captureItem.target = self
-        menu.addItem(captureItem)
+        let verticalItem = NSMenuItem(title: "Vertical Capture Region", action: #selector(captureVertical), keyEquivalent: "j")
+        verticalItem.keyEquivalentModifierMask = [.command, .shift]
+        verticalItem.target = self
+        menu.addItem(verticalItem)
+
+        let horizontalItem = NSMenuItem(title: "Horizontal Capture Region", action: #selector(captureHorizontal), keyEquivalent: "k")
+        horizontalItem.keyEquivalentModifierMask = [.command, .shift]
+        horizontalItem.target = self
+        menu.addItem(horizontalItem)
 
         menu.addItem(NSMenuItem.separator())
 
@@ -32,12 +37,20 @@ class StatusBarController {
         statusItem.menu = menu
     }
 
-    @objc private func captureRegion() {
+    @objc private func captureVertical() {
+        captureRegion(orientation: .vertical)
+    }
+
+    @objc private func captureHorizontal() {
+        captureRegion(orientation: .horizontal)
+    }
+
+    private func captureRegion(orientation: TextOrientation) {
         screenSelector = ScreenSelector { [weak self] capturedImage in
             self?.screenSelector = nil
             guard let image = capturedImage else { return }
 
-            TextRecognizer.recognizeJapanese(from: image) { text in
+            TextRecognizer.recognizeJapanese(from: image, orientation: orientation) { text in
                 DispatchQueue.main.async {
                     guard !text.isEmpty else {
                         let alert = NSAlert()

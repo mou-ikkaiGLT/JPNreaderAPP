@@ -4,6 +4,13 @@ import CoreImage
 import SwiftyTesseract
 import libtesseract
 
+// MARK: - Text Orientation
+
+enum TextOrientation {
+    case vertical
+    case horizontal
+}
+
 // Source - https://stackoverflow.com/a/78669720
 // Posted by Basel
 // Retrieved 2026-02-11, License - CC BY-SA 4.0
@@ -43,20 +50,19 @@ public extension Tesseract {
 }
 
 struct TextRecognizer {
-    static func recognizeJapanese(from image: CGImage, completion: @escaping (String) -> Void) {
+    static func recognizeJapanese(from image: CGImage, orientation: TextOrientation, completion: @escaping (String) -> Void) {
         DispatchQueue.global(qos: .userInitiated).async {
             let enhanced = preprocessImage(image) ?? image
 
-            // Pass 1: SwiftyTesseract with jpn_vert model (vertical text)
-            let verticalResult = runTesseractOCR(on: enhanced)
+            let result: String
+            switch orientation {
+            case .vertical:
+                result = runTesseractOCR(on: enhanced)
+            case .horizontal:
+                result = runVisionOCR(on: enhanced)
+            }
 
-            // Pass 2: Vision framework (horizontal text)
-            let horizontalResult = runVisionOCR(on: enhanced)
-
-            let best = [verticalResult, horizontalResult]
-                .max(by: { $0.count < $1.count }) ?? ""
-
-            DispatchQueue.main.async { completion(best) }
+            DispatchQueue.main.async { completion(result) }
         }
     }
 
@@ -71,7 +77,6 @@ struct TextRecognizer {
 
         tesseract.pageSegmentationMode = .singleBlockVerticalText
 
-        // Convert CGImage to JPEG data for Tesseract
         let nsImage = NSImage(cgImage: image, size: NSSize(width: image.width, height: image.height))
         guard let tiffData = nsImage.tiffRepresentation,
               let bitmap = NSBitmapImageRep(data: tiffData),
