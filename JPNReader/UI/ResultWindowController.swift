@@ -35,7 +35,7 @@ class ResultWindowController {
         scrollView.hasVerticalScroller = true
         scrollView.borderType = .noBorder
 
-        let textView = NSTextView(frame: .zero)
+        let textView = TranslatableTextView(frame: .zero)
         textView.isEditable = false
         textView.isSelectable = true
         textView.font = NSFont.systemFont(ofSize: 16)

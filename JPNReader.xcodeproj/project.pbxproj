@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0798AC482F3D2EBA00BEFE23 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0798AC472F3D2EBA00BEFE23 /* tessdata */; };
+		0798AC4A2F3D34E900BEFE23 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0798AC492F3D34E900BEFE23 /* tessdata */; };
 		2D771E4F49F0405ED39E6802 /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 05A99CDC2F636CF64E69A219 /* SwiftyTesseract */; };
 		49C32DD1A6DF7E4401353253 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876B5C7831C25A97C61F970 /* TextRecognizer.swift */; };
 		5F74F238ED30712A58C953EB /* ResultWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5119FCF2D720A507E03656 /* ResultWindowController.swift */; };
 		682782DADF416673C45D012C /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5942D890BDA00298B305E /* HotkeyManager.swift */; };
 		6E106D91CC8D16BE2DEB07EE /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */; };
 		822863D93E29783AAF81817F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854C1562E1F20D9DA62EB99 /* main.swift */; };
+		9E0949C3A29C14F8F39FAAE8 /* TranslatableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DDFF3CDB256DF105D57828 /* TranslatableTextView.swift */; };
 		A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119377B5104FC5C498AF8E5F /* ScreenSelector.swift */; };
 		B665904D60CBED93221B63B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EBF830DCA040051A41AA6 /* AppDelegate.swift */; };
 		CCE1824656CEEDA722E05E6C /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C6A46313699A053A537127 /* StatusBarController.swift */; };
+		D7D13AE5AB0EA629868FA976 /* WebPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674A56A211B3DABB5B48DABC /* WebPopupController.swift */; };
 		E64E47E26269BDF98B85E98F /* jpn_vert.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 2FAFD07B7751D7D4F1BFB926 /* jpn_vert.traineddata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0798AC472F3D2EBA00BEFE23 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = JPNReader/tessdata; sourceTree = "<group>"; };
+		0798AC492F3D34E900BEFE23 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = JPNReader/tessdata; sourceTree = "<group>"; };
 		0A90880183929ED75F929422 /* JPNReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPNReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1F36983EB2A539AA60C40F /* ScreenCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
 		119377B5104FC5C498AF8E5F /* ScreenSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSelector.swift; sourceTree = "<group>"; };
@@ -29,10 +31,12 @@
 		2876B5C7831C25A97C61F970 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		2FAFD07B7751D7D4F1BFB926 /* jpn_vert.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = jpn_vert.traineddata; sourceTree = "<group>"; };
 		4A5119FCF2D720A507E03656 /* ResultWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWindowController.swift; sourceTree = "<group>"; };
+		674A56A211B3DABB5B48DABC /* WebPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPopupController.swift; sourceTree = "<group>"; };
 		8CB5942D890BDA00298B305E /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
 		A0C6A46313699A053A537127 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		B854C1562E1F20D9DA62EB99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D0920A0AFE86FDC31AEB9B89 /* JPNReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JPNReader.entitlements; sourceTree = "<group>"; };
+		D2DDFF3CDB256DF105D57828 /* TranslatableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatableTextView.swift; sourceTree = "<group>"; };
 		F8ECFADCBDFD1CDBFC8163EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +103,7 @@
 		8058780B6FAC28CD1315EF43 = {
 			isa = PBXGroup;
 			children = (
-				0798AC472F3D2EBA00BEFE23 /* tessdata */,
+				0798AC492F3D34E900BEFE23 /* tessdata */,
 				321BB07A25314157B8B5776C /* JPNReader */,
 				55EDCBCB7F57CD3BF9167AA1 /* Products */,
 			);
@@ -118,6 +122,8 @@
 			children = (
 				4A5119FCF2D720A507E03656 /* ResultWindowController.swift */,
 				A0C6A46313699A053A537127 /* StatusBarController.swift */,
+				D2DDFF3CDB256DF105D57828 /* TranslatableTextView.swift */,
+				674A56A211B3DABB5B48DABC /* WebPopupController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -197,7 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0798AC482F3D2EBA00BEFE23 /* tessdata in Resources */,
+				0798AC4A2F3D34E900BEFE23 /* tessdata in Resources */,
 				E64E47E26269BDF98B85E98F /* jpn_vert.traineddata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +222,8 @@
 				A9786892B35485C7AEAF14C4 /* ScreenSelector.swift in Sources */,
 				CCE1824656CEEDA722E05E6C /* StatusBarController.swift in Sources */,
 				49C32DD1A6DF7E4401353253 /* TextRecognizer.swift in Sources */,
+				9E0949C3A29C14F8F39FAAE8 /* TranslatableTextView.swift in Sources */,
+				D7D13AE5AB0EA629868FA976 /* WebPopupController.swift in Sources */,
 				822863D93E29783AAF81817F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
