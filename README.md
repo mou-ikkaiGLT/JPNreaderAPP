@@ -56,7 +56,7 @@ Captured images are automatically enhanced before OCR:
 
 ### From Source
 
-**Requirements:** Xcode 15+, macOS 13+
+**Requirements:** Xcode 15+, macOS 14+
 
 ```bash
 git clone https://github.com/yourusername/JPNreaderAPP.git
@@ -100,6 +100,10 @@ JPNReader requires two macOS permissions on first launch:
 5. Highlight text and right-click to translate with Jisho or Google Translate
 
 ![Full Workflow](README_images/gif7.gif)
+
+## Caveats and Considerations
+
+The apple vision framwork for horizontal text detection works very well to detect text even in obstructed, low resolution, angled, or otherwise non-ideal conditions. The model for detecting vertical text is sadly not as robust, and to get the best results try to contain purely text in your vertical selections.
 
 ## Project Structure
 
