@@ -3,6 +3,7 @@ import Cocoa
 class StatusBarController {
     private var statusItem: NSStatusItem
     private var screenSelector: ScreenSelector?
+    private var isCapturing = false
     private let hotkeyManager = HotkeyManager()
 
     init() {
@@ -66,8 +67,12 @@ class StatusBarController {
     }
 
     private func captureRegion(orientation: TextOrientation) {
+        guard !isCapturing else { return }
+        isCapturing = true
+
         screenSelector = ScreenSelector { [weak self] capturedImage in
             self?.screenSelector = nil
+            self?.isCapturing = false
             guard let image = capturedImage else { return }
 
             TextRecognizer.recognizeJapanese(from: image, orientation: orientation) { text in

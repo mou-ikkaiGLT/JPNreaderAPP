@@ -152,6 +152,8 @@ class SelectionView: NSView {
         currentRect = nil
     }
 
+    override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
+
     override func resetCursorRects() {
         addCursorRect(bounds, cursor: .crosshair)
     }
