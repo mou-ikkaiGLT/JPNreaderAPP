@@ -2,41 +2,33 @@
 
 A lightweight macOS menu bar app that captures a region of your screen and detects Japanese text using OCR. Supports both horizontal and vertical (tategaki) Japanese text, with built-in dictionary and translation lookups.
 
-<!-- Screenshot of the menu bar icon and dropdown menu -->
-![Menu Bar]()
+![Menu Bar](README_images/gif1.gif)
 
 ## Features
 
 ### Screen Region Capture
 Select any area of your screen to extract Japanese text. A semi-transparent overlay with a crosshair cursor lets you draw a precise selection rectangle.
 
-<!-- Screenshot showing the selection overlay on screen -->
-![Region Selection]()
-
 ### Dual OCR Engines
 - **Horizontal text** — Apple Vision framework with Japanese + English support
 - **Vertical text (tategaki)** — Tesseract OCR with a dedicated `jpn_vert` model and vertical text page segmentation
 
-<!-- Side-by-side: horizontal text capture result and vertical text capture result -->
-![Horizontal Detection]()
-![Vertical Detection]()
+![Horizontal Detection](README_images/gif2.gif)
+![Vertical Detection](README_images/gif3.gif)
 
 ### Floating Result Window
 Detected text appears in a floating, resizable window that stays on top. Text is selectable and copyable.
 
-<!-- Screenshot of the result popup window with detected Japanese text -->
-![Result Window]()
+![Result Window](README_images/gif4.gif)
 
 ### Right-Click Translation
 Highlight any text in the result window and right-click to translate:
 - **Translate with Jisho** — opens [jisho.org](https://jisho.org) dictionary lookup in an in-app browser
 - **Translate with Google** — opens [Google Translate](https://translate.google.com) (JP → EN) in an in-app browser
 
-<!-- Screenshot of the right-click context menu showing translation options -->
-![Context Menu]()
+![Context Menu](README_images/gif5.gif)
 
-<!-- Screenshot of the Jisho web popup -->
-![Jisho Translation]()
+![Jisho Translation](README_images/gif6.gif)
 
 ### Global Hotkeys
 Works system-wide, even when another app is in the foreground:
@@ -99,6 +91,16 @@ JPNReader requires two macOS permissions on first launch:
 
 **Important:** You must quit and relaunch the app after granting each permission.
 
+## Usage
+
+1. Launch JPNReader — **"JP"** appears in the menu bar
+2. Press `Cmd+Shift+J` (vertical) or `Cmd+Shift+K` (horizontal) from any app
+3. Click and drag to select a screen region containing Japanese text
+4. The detected text appears in a floating window
+5. Highlight text and right-click to translate with Jisho or Google Translate
+
+![Full Workflow](README_images/gif7.gif)
+
 ## Project Structure
 
 ```
@@ -137,17 +139,6 @@ JPNreaderAPP/
 | Apple Vision | Built-in | - | Horizontal text OCR |
 | Apple ScreenCaptureKit | Built-in | - | Screen capture |
 | Apple WebKit | Built-in | - | Translation web views |
-
-## Usage
-
-1. Launch JPNReader — **"JP"** appears in the menu bar
-2. Press `Cmd+Shift+J` (vertical) or `Cmd+Shift+K` (horizontal) from any app
-3. Click and drag to select a screen region containing Japanese text
-4. The detected text appears in a floating window
-5. Highlight text and right-click to translate with Jisho or Google Translate
-
-<!-- Screenshot or GIF showing the full workflow from hotkey to translation -->
-![Full Workflow]()
 
 ## Acknowledgements
 
