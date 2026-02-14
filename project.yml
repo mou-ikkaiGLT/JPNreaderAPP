@@ -2,14 +2,14 @@ name: JPNReader
 options:
   bundleIdPrefix: com.joegraham
   deploymentTarget:
-    macOS: "13.0"
+    macOS: "14.0"
   xcodeVersion: "15.0"
   createIntermediateGroups: true
 
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
 
 packages:
   SwiftyTesseract:
@@ -33,3 +33,11 @@ targets:
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
     dependencies:
       - package: SwiftyTesseract
+
+schemes:
+  JPNReader:
+    build:
+      targets:
+        JPNReader: all
+    run:
+      config: Debug

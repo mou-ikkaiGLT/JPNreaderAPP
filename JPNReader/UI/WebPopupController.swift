@@ -5,7 +5,7 @@ class WebPopupController {
     private static var activeWindows: [NSWindow] = []
 
     static func show(url: URL, title: String) {
-        let window = NSWindow(
+        let window = EscapableWindow(
             contentRect: NSRect(x: 0, y: 0, width: 600, height: 500),
             styleMask: [.titled, .closable, .resizable, .miniaturizable],
             backing: .buffered,

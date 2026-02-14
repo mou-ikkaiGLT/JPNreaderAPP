@@ -4,7 +4,7 @@ class ResultWindowController {
     private static var activeWindows: [NSWindow] = []
 
     static func show(text: String) {
-        let window = NSWindow(
+        let window = EscapableWindow(
             contentRect: NSRect(x: 0, y: 0, width: 350, height: 250),
             styleMask: [.titled, .closable, .resizable, .miniaturizable],
             backing: .buffered,

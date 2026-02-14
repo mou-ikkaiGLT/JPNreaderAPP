@@ -21,11 +21,13 @@ class StatusBarController {
     private func setupMenu() {
         let menu = NSMenu()
 
-        let verticalItem = NSMenuItem(title: "Vertical Capture Region (⌘⇧J)", action: #selector(captureVertical), keyEquivalent: "")
+        let verticalItem = NSMenuItem(title: "Vertical Capture Region", action: #selector(captureVertical), keyEquivalent: "j")
+        verticalItem.keyEquivalentModifierMask = [.command, .shift]
         verticalItem.target = self
         menu.addItem(verticalItem)
 
-        let horizontalItem = NSMenuItem(title: "Horizontal Capture Region (⌘⇧K)", action: #selector(captureHorizontal), keyEquivalent: "")
+        let horizontalItem = NSMenuItem(title: "Horizontal Capture Region", action: #selector(captureHorizontal), keyEquivalent: "k")
+        horizontalItem.keyEquivalentModifierMask = [.command, .shift]
         horizontalItem.target = self
         menu.addItem(horizontalItem)
 
